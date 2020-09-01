@@ -5,23 +5,19 @@ import java.util.Scanner;
 
 public class Test02 {
     public static void main(String[] args) {
-//        String str=new Scanner(System.in).nextLine();
-        File file=new File("D:\\aa\\ll\\pp");
-        String str="D:\\aa\\ll\\pp";
+        String str=new Scanner(System.in).nextLine();
+        File file=new File(str);
         removeFile(str);
 
     }
     public static void removeFile(String str){
-        String[] arr=str.split("\\\\");
-
-        String s=null;
-        String start=str.substring(0,str.lastIndexOf("\\")-1);
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                str+=arr[j]+"\\\\";
-            }
-            System.out.println(str);
+//        String[] arr=str.split("\\\\");
+        if(str.length()<3){
+            return;
+        }else{
             new File(str).delete();
+            String s=str.substring(0,str.lastIndexOf("\\"));
+            removeFile(s);
         }
 
     }

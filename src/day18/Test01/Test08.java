@@ -18,5 +18,6 @@ public class Test08 {
         FileOutputStream out=new FileOutputStream("D:\\info.txt");
         byte[] bytes=str.getBytes();
         out.write(bytes);
+        out.close();
     }
 }
