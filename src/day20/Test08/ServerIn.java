@@ -36,14 +36,6 @@ public class ServerIn {
                                 os.flush();
                             }
                         }else{
-//                            i++;
-//                            if (i==strings.size()-2){
-//                                os.write("用户不存在");
-//                                os.flush();
-//                                pro.setProperty(arr[0],arr[1]);
-//                                os.write("注册成功");
-//                                os.flush();
-//                            }
                             os.write("用户不存在");
                             os.flush();
                             pro.setProperty(arr[0],arr[1]);

@@ -25,7 +25,7 @@ public class ClientOu {
 
                         System.out.println("输入完毕");
                         bis= new BufferedReader(new InputStreamReader(socket.getInputStream()));
-//                        socket.shutdownOutput();
+                        socket.shutdownOutput();
                         String s=bis.readLine();
                         System.out.println(s);
                         if(s.equals("密码正确，登录成功")){
